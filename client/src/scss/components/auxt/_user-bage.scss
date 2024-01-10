@@ -1,0 +1,31 @@
+
+.user-badge-item{
+    background-color: $background_color;
+    padding: $base $base * 2;
+    border-radius: $base;
+    display: flex;
+    gap: $gap_sm;
+    $background_color: lightblue;
+$base:10px;
+$gap_sm: 5px;
+$gap_md: 20px;
+
+    button{
+        @include no_bd_no_bg;
+        text-align: center;
+        font-size: $gap_md;
+        width: $gap_md;
+        height: $gap_md;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 768px) {
+        flex-direction: column; // Stack items vertically
+        align-items: center; // Center items horizontally
+        text-align: center;
+        
+
+        button {
+            margin-top: $gap_sm; // Add margin between the text and the button
+        }
+    }
+}
